@@ -1,4 +1,4 @@
-# dotnet core tdd using xunit
+# Dotnet-Core Kata skeleton to practice TDD
 I'm writing this repo to learn how to use dotnet core to practice TDD.
 
 I will try to setup the walinkg skeleton to run the StringCalculator Kata.
