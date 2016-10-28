@@ -1,7 +1,7 @@
 # Dotnet-Core Kata skeleton to practice TDD
 I'm writing this repo to learn how to use dotnet core to practice TDD.
 
-I will try to setup the walinkg skeleton to run the StringCalculator Kata.
+I will try to setup the walking skeleton to run the StringCalculator Kata.
 
 Ref [Roy Osherove's String Calculator Kata](http://osherove.com/tdd-kata-1/)
 ## PART 0 Setup The Environment
@@ -23,7 +23,7 @@ dnvm upgrade -r coreclr
 Command+p > ext install csharp
 ```
 ## PART 1 The walking skeleton
-### Step 1.1 Crete the following folders structure:
+### Step 1.1 Create the following folders structure:
 ```sh
 /dotnet-core-kata-skeleton
 |__/src
@@ -33,7 +33,7 @@ Command+p > ext install csharp
 ```
 ### Step 1.2 Prepare the contents
 #### 1.2.1 global.json
-Inside the root folder `dotnet-core-kata-skeleton` crete the file `global.json` with the following content:
+Inside the root folder `dotnet-core-kata-skeleton` create the file `global.json` with the following content:
 ```json
 {
     "projects": [
@@ -49,7 +49,7 @@ dotnet new -t lib
 ```
 Rename `Library.cs` as `Application.cs`.
 
-To use test-driven development (TDD), you'll create a failing implementation of the `Application` class:
+To use Test-driven Development (TDD), you'll create a failing implementation of the `Application` class:
 ```csharp
 using System;
 
@@ -107,7 +107,7 @@ Inside `project.json` add the reference to the `DotNetKata` project:
   }
 ```
 
-**PART 1 Finished: Walking scheleton is ready!** 
+**PART 1 Finished: Walking skeleton is ready!** 
 
 ```sh
 /dotnet-core-kata-skeleton
