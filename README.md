@@ -13,7 +13,7 @@ Install .NET Core following the instructions from https://www.microsoft.com/net/
 Command+p > ext install csharp
 ```
 ## The walking skeleton
-Create the following folders structure:
+You can use the ready-to-go project structure (if so, skip to "Build solution and run tests") or create the following folders structure:
 
 ```sh
 /dotnet-core-kata-skeleton
@@ -22,8 +22,7 @@ Create the following folders structure:
 |__/test
    |__/DotNetKata.Tests
 ```
-### Step 1.2 Prepare the contents
-#### 1.2.1 global.json
+### Prepare the contents
 Inside the root folder `dotnet-core-kata-skeleton` create the file `global.json` with the following content:
 ```json
 {
@@ -33,7 +32,7 @@ Inside the root folder `dotnet-core-kata-skeleton` create the file `global.json`
     ]
 }
 ```
-#### 1.2.2 DotNetKata project
+#### DotNetKata project
 ```sh
 cd /dotnet-core-kata-skeleton/src/DotNetKata/
 dotnet new -t lib
@@ -56,7 +55,7 @@ namespace DotNetKata
 }
 ```
 
-#### 1.2.3 DotNetKata.Tests project
+#### DotNetKata.Tests project
 ```sh
 cd ../../test/DotNetKata.Tests/
 dotnet -new -t xunittest
@@ -98,7 +97,7 @@ Inside `project.json` add the reference to the `DotNetKata` project:
   }
 ```
 
-**PART 1 Finished: Walking skeleton is ready!**
+**The walking skeleton is ready!**
 
 ```sh
 /dotnet-core-kata-skeleton
@@ -113,54 +112,30 @@ Inside `project.json` add the reference to the `DotNetKata` project:
       |__project.json
 ```
 
-## PART 2 Build solution and run tests
-## 2.1 Build solution
+## Build solution and run tests
+Build and run the tests
 ```sh
-cd dotnet-core-kata-skeleton/test/DotNetKata
+cd test/DotNetKata.Tests
 dotnet restore
-dotnet build
-```
-
-## 2.2 Run Tests
-```sh
-cd dotnet-core-kata-skeleton/test/DotNetKata.Tests
-dotnet restore
-dotnet build
 dotnet test
 ```
 
+You should get a red bar
 ```sh
-➜  DotNetKata.Tests git:(master) ✗ dotnet test
-Project DotNetKata (.NETStandard,Version=v1.6) was previously compiled. Skipping compilation.
-Project DotNetKata.Tests (.NETCoreApp,Version=v1.0) will be compiled because inputs were modified
-Compiling DotNetKata.Tests for .NETCoreApp,Version=v1.0
-/[***]/dotnet-core-kata-skeleton/test/DotNetKata.Tests/project.json(9,46): warning NU1007: Dependency specified was dotnet-test-xunit >= 1.0.0-rc2-192208-24 but ended up with dotnet-test-xunit 1.0.0-rc2-build10015.
-
-Compilation succeeded.
-    1 Warning(s)
-    0 Error(s)
-
-Time elapsed 00:00:01.0497609
-
-
-xUnit.net .NET CLI test runner (64-bit osx.10.11-x64)
+  ...
   Discovering: DotNetKata.Tests
   Discovered:  DotNetKata.Tests
   Starting:    DotNetKata.Tests
     DotNetKata.Tests.ApplicationTests.DoesSomethingCorrectly [FAIL]
       System.NotImplementedException : The method or operation is not implemented.
       Stack Trace:
-        /[***]/dotnet-core-kata-skeleton/src/DotNetKata/Application.cs(9,0): at DotNetKata.Application.DoSomething()
-        /[***]/dotnet-core-kata-skeleton/test/DotNetKata.Tests/ApplicationTests.cs(13,0): at DotNetKata.Tests.ApplicationTests.DoesSomethingCorrectly()
+        ...
+        ...
   Finished:    DotNetKata.Tests
 === TEST EXECUTION SUMMARY ===
-   DotNetKata.Tests  Total: 1, Errors: 0, Failed: 1, Skipped: 0, Time: 0.189s
+   DotNetKata.Tests  Total: 1, Errors: 0, Failed: 1, Skipped: 0, Time: 0.173s
 SUMMARY: Total: 1 targets, Passed: 0, Failed: 1.
 ```
 
 **FINISH!**
 Well done! You are ready to start practicing you kata!
-
-### Credits to:
-Steve Smith
-[Unit Testing in .NET Core using dotnet test](https://docs.microsoft.com/en-us/dotnet/articles/core/testing/unit-testing-with-dotnet-test)
