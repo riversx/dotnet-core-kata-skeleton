@@ -4,26 +4,17 @@ I'm writing this repo to learn how to use dotnet core to practice TDD.
 I will try to setup the walking skeleton to run the StringCalculator Kata.
 
 Ref [Roy Osherove's String Calculator Kata](http://osherove.com/tdd-kata-1/)
-## PART 0 Setup The Environment
-#### 0.1 Installing dnvm :  Dot.Net Version Manager
-```sh
-curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
-```
-### 0.2 Install the .NET Execution Environment (DNX)
-Set/?install DNX for Mono:
-```sh
-dnvm upgrade -r mono
-```
-Set/?install DNX for .NET Core:
-```sh
-dnvm upgrade -r coreclr
-```
-### 0.3 (Optional) Install the Visual Studio Core extension for c#:
+## Setup The Environment
+### Installing .NET Core
+Install .NET Core following the instructions from https://www.microsoft.com/net/core
+
+#### (Optional) Install the Visual Studio Core extension for C# in Visual Studio Code:
 ```sh
 Command+p > ext install csharp
 ```
-## PART 1 The walking skeleton
-### Step 1.1 Create the following folders structure:
+## The walking skeleton
+Create the following folders structure:
+
 ```sh
 /dotnet-core-kata-skeleton
 |__/src
@@ -65,9 +56,9 @@ namespace DotNetKata
 }
 ```
 
-#### 1.2.3 DoeNetKata.Tests project
+#### 1.2.3 DotNetKata.Tests project
 ```sh
-cd ../../test/DoeNetKata.Tests/
+cd ../../test/DotNetKata.Tests/
 dotnet -new -t xunittest
 ```
 Rename `Tests.cs` as `ApplicationTests.cs`.
@@ -81,7 +72,7 @@ namespace DotNetKata.Tests
     public class ApplicationTests
     {
         [Fact]
-        public void DoesSomethingCorrectly() 
+        public void DoesSomethingCorrectly()
         {
             int expectedResult = 1;
             var app = new Application();
@@ -107,7 +98,7 @@ Inside `project.json` add the reference to the `DotNetKata` project:
   }
 ```
 
-**PART 1 Finished: Walking skeleton is ready!** 
+**PART 1 Finished: Walking skeleton is ready!**
 
 ```sh
 /dotnet-core-kata-skeleton
@@ -127,14 +118,14 @@ Inside `project.json` add the reference to the `DotNetKata` project:
 ```sh
 cd dotnet-core-kata-skeleton/test/DotNetKata
 dotnet restore
-dotnet build 
+dotnet build
 ```
 
 ## 2.2 Run Tests
 ```sh
 cd dotnet-core-kata-skeleton/test/DotNetKata.Tests
 dotnet restore
-dotnet build 
+dotnet build
 dotnet test
 ```
 
